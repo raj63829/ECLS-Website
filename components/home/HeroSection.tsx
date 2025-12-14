@@ -179,7 +179,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative hidden lg:block"
+            className="relative block lg:block mt-12 lg:mt-0"
           >
             <div className="relative">
               <motion.div
