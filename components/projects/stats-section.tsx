@@ -45,7 +45,7 @@ export function StatsSection() {
             </div>
           ))}
         </div>
-      </div>w
+      </div>
     </section>
   )
 }
