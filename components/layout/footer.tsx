@@ -113,13 +113,20 @@ export function Footer() {
               <h4 className="text-white font-semibold mb-6">Contact Us</h4>
               <ul className="space-y-4 text-sm">
 
-                <li className="flex gap-3">
-                  <MapPin className="w-5 h-5 text-brand-500 flex-shrink-0 mt-1" />
-                  <span className="text-zinc-500">
-                    Flat No: T2, Sai Landmark Apartments, Kamala Nagar, Near HDFC Bank,
-                    Chaitanyapuri, Hyderabad 500060
-                  </span>
-                </li>
+<li>
+  <a
+    href="https://maps.app.goo.gl/eXPNSpirjT3qnvgt6?g_st=aw"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex gap-3 text-zinc-500 hover:text-brand-400 transition-colors"
+  >
+    <MapPin className="w-5 h-5 text-brand-500 flex-shrink-0 mt-1" />
+    <span>
+      Flat No: T2, Sai Landmark Apartments, Kamala Nagar, Near HDFC Bank,
+      Chaitanyapuri, Hyderabad 500060
+    </span>
+  </a>
+</li>
 
                 <li>
                   <a href="tel:+919160006006" className="flex gap-3 text-zinc-500 hover:text-brand-400 transition-colors">
