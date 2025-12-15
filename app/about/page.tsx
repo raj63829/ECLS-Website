@@ -22,26 +22,38 @@ const values = [
 
 const team = [
   {
-    name: "Dr. Rajesh Kumar",
-    role: "Founder & CEO",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200",
+    name: "B. Prashanth Reddy",
+    role: "Managing Director",
+    image: "/team/prashanth-reddy.jpg",
   },
   {
-    name: "Priya Nair",
-    role: "Head of Training",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200",
+    name: "Priya Sabde",
+    role: "ML Engineer",
+    image: "/team/priya-sabde.jpg",
   },
   {
-    name: "Suresh Reddy",
-    role: "Technical Director",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200",
+    name: "Raj Sharma",
+    role: "AI Engineer & Researcher",
+    image: "/team/raj-sharma.jpg",
+    profileUrl: "https://rajsharma7.netlify.app/",
   },
   {
-    name: "Anitha Sharma",
-    role: "Placement Head",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200",
+    name: "Sriram Posimsetti",
+    role: "AI Engineer",
+    image: "/team/sriram-posimsetti.jpg",
+  },
+  {
+    name: "Malli Gowri Sankar",
+    role: "Software Developer",
+    image: "/team/malli-gowri-sankar.jpg",
+  },
+  {
+    name: "Busagani Hari Krishna",
+    role: "Full Stack Developer",
+    image: "/team/busagani-hari-krishna.png",
   },
 ]
+
 
 const milestones = [
   { year: "2012", title: "Founded", description: "Started with a vision to transform IT education" },
@@ -306,30 +318,44 @@ export default function About() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group"
-              >
-                <div className="relative rounded-2xl overflow-hidden mb-4">
-                  <Image
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    width={400}
-                    height={400}
-                    className="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <h3 className="text-xl font-bold text-white">{member.name}</h3>
-                <p className="text-white">{member.role}</p>
-              </motion.div>
-            ))}
+          {team.map((member, index) => {
+  const Card = (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      whileHover={{ y: -8 }}
+      className="group cursor-pointer"
+    >
+      <div className="relative rounded-2xl overflow-hidden mb-4">
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={400}
+          height={400}
+          className="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      </div>
+      <h3 className="text-xl font-bold text-white">{member.name}</h3>
+      <p className="text-zinc-400">{member.role}</p>
+    </motion.div>
+  )
+
+  return member.profileUrl ? (
+    <Link
+      key={index}
+      href={member.profileUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {Card}
+    </Link>
+  ) : (
+    <div key={index}>{Card}</div>
+  )
+})}
           </div>
         </div>
       </section>
