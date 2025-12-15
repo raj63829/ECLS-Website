@@ -43,9 +43,9 @@ export function Footer() {
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ecode-learning-software-services-007972310/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/ecode_learning_software?igsh=NHR6MTF4ZDhpYjJs", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/@ecodelearningsoftwareservices", label: "YouTube" },
   ]
 
   return (

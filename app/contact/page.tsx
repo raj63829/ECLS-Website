@@ -20,6 +20,27 @@ import {
   CheckCircle2,
 } from "lucide-react"
 
+/* ================= SOCIAL LINKS ================= */
+const socialLinks = [
+  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Twitter, href: "#", label: "Twitter" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/ecode-learning-software-services-007972310/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/ecode_learning_software?igsh=NHR6MTF4ZDhpYjJs",
+    label: "Instagram",
+  },
+  {
+    icon: Youtube,
+    href: "https://www.youtube.com/@ecodelearningsoftwareservices",
+    label: "YouTube",
+  },
+]
+
 const contactInfo = [
   {
     icon: Phone,
@@ -37,7 +58,7 @@ const contactInfo = [
     icon: MapPin,
     title: "Address",
     details: ["Flat No:T2, Sai Landmark Apartments", "Kamala Nagar, Near HDFC Bank", "Chaitanyapuri, Hyderabad 500060"],
-    action: "#",
+    action: "https://maps.app.goo.gl/eXPNSpirjT3qnvgt6?g_st=aw",
   },
   {
     icon: Clock,
@@ -141,30 +162,25 @@ export default function Contact() {
                   </div>
                 </motion.a>
               ))}
-
-              {/* Social Links */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="bg-slate-900 rounded-2xl p-6"
-              >
-                <h3 className="text-lg font-bold text-white mb-4">Follow Us</h3>
-                <div className="flex gap-3">
-                  {[Facebook, Twitter, Linkedin, Instagram, Youtube].map((Icon, index) => (
-                    <a
-                      key={index}
-                      href="#"
-                      className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-sky-500 transition-colors"
-                    >
-                      <Icon className="w-5 h-5 text-white" />
-                    </a>
-                  ))}
-                </div>
-              </motion.div>
+{/* ===== SOCIAL LINKS ===== */}
+            <div className="bg-slate-900 rounded-2xl p-6">
+              <h3 className="text-lg font-bold mb-4">Follow Us</h3>
+              <div className="flex gap-3">
+                {socialLinks.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.label}
+                    className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-sky-500 transition-colors"
+                  >
+                    <item.icon className="w-5 h-5 text-white" />
+                  </a>
+                ))}
+              </div>
             </div>
-
+          </div>
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -294,16 +310,16 @@ export default function Contact() {
             viewport={{ once: true }}
             className="rounded-3xl overflow-hidden shadow-xl"
           >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.6551773889774!2d78.54!3d17.38!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIyJzQ4LjAiTiA3OMKwMzInMjQuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
-            />
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.5861273544715!2d78.53298029999999!3d17.366188499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb992b568cc71f%3A0xf29cd9feff1f7fae!2sECODE%20LEARNING%20SOFTWARE%20SERVICES!5e1!3m2!1sen!2sin!4v1765780366802!5m2!1sen!2sin"
+  width="100%"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  className="grayscale hover:grayscale-0 transition-all duration-500 rounded-3xl"
+/>
           </motion.div>
         </div>
       </section>
