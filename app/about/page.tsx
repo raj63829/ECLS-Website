@@ -41,6 +41,7 @@ const team = [
     name: "Sriram Posimsetti",
     role: "AI Engineer",
     image: "/team/sriram-posimsetti.jpg",
+    profileUrl: "https://sriram-portfolio1.netlify.app/",
   },
   {
     name: "Malli Gowri Sankar",
