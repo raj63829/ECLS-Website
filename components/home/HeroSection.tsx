@@ -7,11 +7,16 @@ import { ChevronRight, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const services = [
-  { title: "Enterprise Software", subtitle: "Scalable solutions for businesses" },
-  { title: "Cloud Architecture", subtitle: "Modern cloud-native applications" },
   { title: "AI & Machine Learning", subtitle: "Intelligent automation solutions" },
   { title: "Custom Development", subtitle: "Tailored software for your needs" },
   { title: "Digital Transformation", subtitle: "Modernize your technology stack" },
+  { title: "Web Application Development", subtitle: "High-performance, responsive web platforms" },
+  { title: "Mobile App Development", subtitle: "iOS and Android apps built for scale" },
+  { title: "Cybersecurity Solutions", subtitle: "Protect systems, data, and digital assets" },
+  { title: "API Development & Integration", subtitle: "Seamless system and third-party integrations" },
+  { title: "SaaS Product Development", subtitle: "Build, launch, and scale SaaS platforms" },
+  { title: "Blockchain Development", subtitle: "Secure, decentralized application solutions" },
+  { title: "Quality Assurance & Testing", subtitle: "Ensure performance, security, and reliability" },
 ]
 
 const FloatingParticle = ({ delay, duration, x, y }: { delay: number; duration: number; x: number; y: number }) => (
