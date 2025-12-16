@@ -126,7 +126,7 @@ export default function AboutSection() {
               ))}
             </div>
 
-            <Link href="/about">
+            <Link href="/about">About</Link>
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 h-14 rounded-xl shadow-lg shadow-blue-500/25 group"

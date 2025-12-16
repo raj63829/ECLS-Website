@@ -27,7 +27,7 @@ export function Footer() {
       { name: "About", href: "/about" },
       { name: "Services", href: "/services" },
       { name: "Solutions", href: "/courses" },
-      { name: "Portfolio", href: "/Projects" },
+      { name: "Portfolio", href: "/projects" },
       { name: "Contact", href: "/contact" },
     ],
     "Our Solutions": [
