@@ -26,6 +26,11 @@ const team = [
     role: "Managing Director",
     image: "/team/prashanth-reddy.jpg",
   },
+    {
+    name: "Y. Badri",
+    role: "Matlab & Embedded Systems Trainer",
+    image: "/team/badri.jpg",
+  },
   {
     name: "Priya Sabde",
     role: "ML Engineer",
