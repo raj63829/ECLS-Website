@@ -1,4 +1,5 @@
 "use client"
+
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, ArrowRight, Users, Trophy, Target, Lightbulb } from "lucide-react"
@@ -25,6 +26,7 @@ export default function AboutSection() {
     <section className="py-24 bg-gradient-to-b from-black-50 to-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -34,11 +36,9 @@ export default function AboutSection() {
             className="relative"
           >
             <div className="relative">
-              {/* Background Decorations */}
               <div className="absolute -top-6 -left-6 w-72 h-72 bg-blue-100 rounded-full opacity-50 blur-3xl" />
               <div className="absolute -bottom-6 -right-6 w-72 h-72 bg-orange-100 rounded-full opacity-50 blur-3xl" />
 
-              {/* Main Image */}
               <div className="relative">
                 <motion.img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070"
@@ -48,7 +48,6 @@ export default function AboutSection() {
                   transition={{ duration: 0.3 }}
                 />
 
-                {/* Floating Card */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -56,24 +55,18 @@ export default function AboutSection() {
                   transition={{ delay: 0.5 }}
                   className="absolute -bottom-8 -right-8 bg-black rounded-2xl p-6 shadow-xl"
                 >
-<div className="flex items-center gap-4">
-  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
-    <span
-      className="iconify text-white"
-      data-icon="lucide:rocket"
-      data-width="32"
-    ></span>
-  </div>
-
-  <div>
-    <p className="text-3xl font-bold text-white-900">10+</p>
-    <p className="text-white-600">Years of Excellence</p>
-  </div>
-</div>
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
+                      <span className="iconify text-white" data-icon="lucide:rocket" data-width="32"></span>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-white">10+</p>
+                      <p className="text-white-600">Years of Excellence</p>
+                    </div>
+                  </div>
                 </motion.div>
               </div>
 
-              {/* Secondary Image */}
               <motion.img
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -96,20 +89,19 @@ export default function AboutSection() {
             <span className="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-semibold mb-4">
               ABOUT E-CODE
             </span>
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Enterprise Software Solutions
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                {" "}
-                Built for Scale
+                {" "}Built for Scale
               </span>
             </h2>
+
             <p className="text-lg text-white-600 mb-8 leading-relaxed">
-              E-Code is a leading software development company specializing in enterprise-grade applications, cloud
-              infrastructure, and digital transformation. We partner with businesses worldwide to deliver innovative
-              solutions that drive growth and operational excellence.
+              E-Code is a leading software development company specializing in enterprise-grade applications,
+              cloud infrastructure, and digital transformation.
             </p>
 
-            {/* Features Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -120,22 +112,24 @@ export default function AboutSection() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-green-500" />
                   <span className="text-white-700">{feature}</span>
                 </motion.div>
               ))}
             </div>
 
-            <Link href="/about">About</Link>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 h-14 rounded-xl shadow-lg shadow-blue-500/25 group"
-              >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 h-14 rounded-xl shadow-lg shadow-blue-500/25 group"
+            >
+              <Link href="/about">
                 Learn More About Us
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </motion.div>
+
         </div>
 
         {/* Stats Section */}
@@ -152,24 +146,15 @@ export default function AboutSection() {
               whileHover={{ y: -5 }}
               className="bg-black rounded-2xl p-6 shadow-lg border border-black-100 text-center"
             >
-              <div
-                className={`w-14 h-14 mx-auto mb-4 rounded-xl bg-black-50 flex items-center justify-center ${stat.color}`}
-              >
+              <div className={`w-14 h-14 mx-auto mb-4 rounded-xl bg-black-50 flex items-center justify-center ${stat.color}`}>
                 <stat.icon className="w-7 h-7" />
               </div>
-              <motion.p
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, type: "spring" }}
-                className="text-3xl font-bold text-white mb-1"
-              >
-                {stat.value}
-              </motion.p>
+              <p className="text-3xl font-bold text-white mb-1">{stat.value}</p>
               <p className="text-white">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>
+
       </div>
     </section>
   )
