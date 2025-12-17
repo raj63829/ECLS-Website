@@ -1,4 +1,9 @@
+# Old HTML pages (SEO safe)
 /about-us.html /about 301
 /services.html /services 301
 /contact-us.html /contact 301
 /industrial-training.html /courses 301
+
+# Case-sensitive fix for Projects
+/Projects /projects 301
+/Projects/* /projects/:splat 301
